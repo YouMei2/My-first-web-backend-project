@@ -5,7 +5,7 @@ const products = [
         name: 'Nike Air Max',
         category: 'sneakers',
         price: 120,
-        image: 'placeholder-sneakers.jpg',
+        image: 'images/airmax.jpg',
         description: 'Comfortable sneakers for everyday wear',
         sizes: ['38', '39', '40', '41', '42', '43'],
         details: {
@@ -20,7 +20,7 @@ const products = [
         name: 'Adidas Ultraboost',
         category: 'sneakers',
         price: 110,
-        image: 'placeholder-sneakers.jpg',
+        image: 'images/ultraboost.jpg',
         description: 'Running sneakers with Boost technology',
         sizes: ['38', '39', '40', '41', '42', '43'],
         details: {
@@ -32,10 +32,10 @@ const products = [
     },
     {
         id: 3,
-        name: 'Basic Hoodie',
+        name: 'Basic black Hoodie',
         category: 'hoodies',
         price: 30,
-        image: 'placeholder-hoodie.jpg',
+        image: 'images/basic-black-hoodie.jpg',
         description: 'Classic cotton hoodie',
         sizes: ['XS', 'S', 'M', 'L', 'XL'],
         details: {
@@ -50,7 +50,7 @@ const products = [
         name: 'Oversized Sweatshirt',
         category: 'hoodies',
         price: 45,
-        image: 'placeholder-hoodie.jpg',
+        image: 'images/grey-sweatshirt.jpg',
         description: 'Oversized loose fit sweatshirt',
         sizes: ['XS', 'S', 'M', 'L', 'XL'],
         details: {
@@ -202,7 +202,7 @@ function createProductCard(product) {
     
     card.innerHTML = `
         <div class="product-image">
-            <div>[Product Image]</div>
+            <div><img src="${product.image}" alt="${product.name}"></div>
         </div>
         <div class="product-info">
             <h3>${product.name}</h3>
@@ -214,7 +214,7 @@ function createProductCard(product) {
     return card;
 }
 
-// Filter products
+    // Filter products
 function filterProducts() {
     let filtered = products;
     

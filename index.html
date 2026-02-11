@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Шапка сайта -->
+    <!-- header -->
     <header>
         <div class="container">
             <div class="logo">
@@ -15,29 +15,29 @@
             </div>
             <nav>
                 <ul class="nav-menu">
-                    <li><a href="#" data-category="all">Все товары</a></li>
-                    <li><a href="#" data-category="sneakers">Кроссовки</a></li>
-                    <li><a href="#" data-category="hoodies">Кофты</a></li>
-                    <li><a href="#" data-category="pants">Штаны</a></li>
-                    <li><a href="#" data-category="jeans">Джинсы</a></li>
-                    <li><a href="#" data-category="socks">Носки</a></li>
+                    <li><a href="#" data-category="all">All products</a></li>
+                    <li><a href="#" data-category="sneakers">sneakers</a></li>
+                    <li><a href="#" data-category="hoodies">hoodies</a></li>
+                    <li><a href="#" data-category="pants">Pants</a></li>
+                    <li><a href="#" data-category="jeans">Jeans</a></li>
+                    <li><a href="#" data-category="socks">Socks</a></li>
                 </ul>
             </nav>
             <div class="cart">
-                <button id="cart-btn">Корзина (<span id="cart-count">0</span>)</button>
+                <button id="cart-btn">Cart(<span id="cart-count">0</span>)</button>
             </div>
         </div>
     </header>
 
-    <!-- Основной контент -->
+    <!-- main content -->
     <main>
         <div class="container">
-            <!-- Фильтры -->
+            <!-- filters -->
             <aside class="filters">
-                <h2>Фильтры</h2>
+                <h2>Filters</h2>
                 
                 <div class="filter-group">
-                    <h3>Размер</h3>
+                    <h3>Size</h3>
                     <div class="filter-options">
                         <label><input type="checkbox" name="size" value="xs"> XS</label>
                         <label><input type="checkbox" name="size" value="s"> S</label>
@@ -48,33 +48,33 @@
                 </div>
 
                 <div class="filter-group">
-                    <h3>Цена</h3>
+                    <h3>Price</h3>
                     <input type="number" id="price-min" placeholder="От">
                     <input type="number" id="price-max" placeholder="До">
                 </div>
 
-                <button id="apply-filters">Применить фильтры</button>
-                <button id="reset-filters">Сбросить</button>
+                <button id="apply-filters">Apply filters</button>
+                <button id="reset-filters">reset changes</button>
             </aside>
 
-            <!-- Список товаров -->
+            <!-- list of the products -->
             <section class="products">
                 <div class="products-header">
-                    <h2>Товары</h2>
+                    <h2>Products</h2>
                     <select id="sort-select">
-                        <option value="default">По умолчанию</option>
-                        <option value="price-asc">Цена: по возрастанию</option>
-                        <option value="price-desc">Цена: по убыванию</option>
-                        <option value="name-asc">Название: А-Я</option>
+                        <option value="default">by default</option>
+                        <option value="price-asc">Price: Low to High</option>
+                        <option value="price-desc">Price: High to Low</option>
+                        <option value="name-asc">Sort by name: A to Z</option>
                     </select>
                 </div>
 
                 <div id="products-grid" class="products-grid">
-                    <!-- Товары будут загружаться через JavaScript -->
+                    <!-- products are gonna be loaded on JavaScript -->
                 </div>
 
                 <div id="no-products" class="no-products" style="display: none;">
-                    <p>Товары не найдены</p>
+                    <p>products not found</p>
                 </div>
             </section>
         </div>
@@ -93,24 +93,24 @@
                     <p class="modal-category" id="modal-category"></p>
                     <p class="modal-price" id="modal-price"></p>
                     <div class="modal-description">
-                        <h3>Описание</h3>
+                        <h3>description</h3>
                         <p id="modal-description"></p>
                     </div>
                     <div class="modal-details">
-                        <h3>Характеристики</h3>
+                        <h3>Details</h3>
                         <ul id="modal-details"></ul>
                     </div>
                     <div class="modal-size">
-                        <h3>Размер</h3>
+                        <h3>Size</h3>
                         <select id="modal-size-select">
                             <!-- Размеры будут добавляться динамически -->
                         </select>
                     </div>
                     <div class="modal-quantity">
-                        <h3>Количество</h3>
+                        <h3>quantity</h3>
                         <input type="number" id="modal-quantity" value="1" min="1">
                     </div>
-                    <button id="add-to-cart-btn" class="btn-primary">Добавить в корзину</button>
+                    <button id="add-to-cart-btn" class="btn-primary">add to cart</button>
                 </div>
             </div>
         </div>
@@ -121,17 +121,17 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <div class="modal-body">
-                <h2>Корзина</h2>
+                <h2>cart</h2>
                 <div id="cart-items" class="cart-items">
                     <!-- Товары корзины будут загружаться через JavaScript -->
                 </div>
                 <div id="empty-cart" class="empty-cart" style="display: none;">
-                    <p>Корзина пуста</p>
+                    <p>cart is empty</p>
                 </div>
                 <div class="cart-total">
-                    <h3>Итого: <span id="cart-total">0</span> €</h3>
+                    <h3>total: <span id="cart-total">0</span> €</h3>
                 </div>
-                <button id="checkout-btn" class="btn-primary">Оформить заказ</button>
+                <button id="checkout-btn" class="btn-primary">checkout</button>
             </div>
         </div>
     </div>
